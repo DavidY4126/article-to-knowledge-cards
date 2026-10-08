@@ -1,0 +1,15 @@
+# make-knowledge-cards — OpenAI Agents SDK 配置
+# 与 SKILL.md 配套：本文件声明代理元数据，具体工作流程与卡片规范以同目录上级的 SKILL.md 为准。
+
+name: make-knowledge-cards
+description: >
+  把用户粘贴的文章或本地 Markdown/TXT 文件提炼成 5~8 张知识卡片，
+  每张卡片包含标题、核心知识、简明解释、例子或自测问题。
+  不抓取网页、不处理 PDF、不导出 Anki、不提供图形界面。
+
+model: gpt-4o
+
+# 执行时加载上级目录的 SKILL.md 作为指令，避免在此重复维护流程。
+instructions: |
+  先完整阅读本仓库 skills/make-knowledge-cards/SKILL.md，
+  严格按其中"工作流程""卡片规范""输出格式"和"质量红线"执行。
